@@ -70,9 +70,9 @@ To run the entire project use JupyterLab or similar IDE.
 
 Notebooks can also be run directly on google colab (make sure to upload required .py files in working directory if required).
 
-To run the flask script:
+To run the scripts:
 ```
-$ python helper_text_preprocessing.py
+$ python <file_name>.py
 ```
 
 > NOTE: Notebooks may use python scripts to run.
