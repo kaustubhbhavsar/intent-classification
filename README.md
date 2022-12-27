@@ -19,7 +19,7 @@
 
 Question is - how did Ron completed the task here? Roughly, he first found the intent of the task, i.e., what needs to be done? Here, intent was 'PlayMusic'. So, Ron thus started a music app and played the above mentioned song.
 
-Now, how about automatically finding out the intent of the user? How about finding what the user intents to do, and responding likewise at earliest thus keeping the user sticking around the app? A win-win situation for both the user and the app creator.
+Extending this concept little further; what if we could automatically find out the intent of the user and responding likewise at earliest thus keeping the user sticking around the app? A win-win situation for both the user and the app creator.
 
 Intent classification is the task of classifying the text into one of the many intents (multiclass-classification).
 
@@ -47,10 +47,16 @@ Model Architecture | Accuracy
 <!-- Project Directory Structure -->
 ## Directory Structure
 ```
-├── Data Files                            # Data files
-    ├── ...              
+├── Data Files                            # Data files              
     └── ...         
-
+├── Other Files                           # Miscellaneous files
+    └── ...
+├── 1_data_analysis                       # Data Analysis
+├── 2_topic_modelling                     # Topic Modelling
+├── 3_mlp_intEncoding                     # MLP Classifier (with int encoding)
+├── 4_mlp_gloveEmbedding                  # MLP Classifier (with glove embedding)
+├── 5_lstm                                # LSTM Classifier (vanilla, stacked, bidirectional)
+├── 6_smallBert                           # smallBert Classifier
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -60,21 +66,13 @@ Model Architecture | Accuracy
 ## Languge and Libraries
 
 *   Language: Python
-*   Libraries: Tensorflow, Keras, Scikit-Learn, Gensim, NLTK, PyLDAviz, Re, Matplotlib, Seaborn, Numpy, Pandas, OS.
+*   Libraries: Tensorflow, Keras, Tensorflow-Hub, Scikit-Learn, Gensim, NLTK, Spacy, PyLDAviz, Re, WordCloud, Matplotlib, Seaborn, Numpy, Pandas, String, OS.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- Final Notes -->
 ## Final Notes
-To run the entire project use JupyterLab or similar IDE.
 
-Notebooks can also be run directly on google colab (make sure to upload required .py files in working directory if required).
-
-To run the scripts:
-```
-$ python <file_name>.py
-```
-
-> NOTE: Notebooks may use python scripts to run.
+Notebooks can be run directly on google colab (make sure to upload required .py files in working directory if required).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
