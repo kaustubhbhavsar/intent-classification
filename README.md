@@ -38,41 +38,50 @@ Utilizing MLP, LSTM, and BERT (along with various embedding algorithms), intent 
 1.  <a href="3_mlp_intEncoding.ipynb"><b>MLP with Integer Encoding</b></a>
 
     * Model 1.1:
-    
+
+    <p align='center'>
     INPUT => EMBEDDING (int encoding) => FLATTEN => FC => RELU => DO => FC => SOFTMAX
+    </p>
 
-
-    * Model 1.2:
-
-    INPUT => EMBEDDING (int encoding) => GAP1D => FC => RELU => DO => FC => SOFTMAX
+     * Model 1.2:
+    <p align='center'>
+      INPUT => EMBEDDING (int encoding) => GAP1D => FC => RELU => DO => FC => SOFTMAX
+    </p>
 
 Model 1.1's flatten layer leads to more trainable parameters compared to Model 1.2 that uses GlobalAveragePooling1D. Better performance is achieved by model 1.2.
 
 2.   <a href="4_mlp_gloveEmbedding.ipynb"><b>MLP with Glove Embedding</b></a>
     
       * Model 2.1:
-    
+    <p align='center'>
       INPUT => EMBEDDING (Glove Embedding) => GMP1D => FC => RELU => DO => FC => RELU => DO => FC => SOFTMAX
+    </p>
     
       * Model 2.2:
-    
+    <p align='center'>
       INPUT => EMBEDDING (Glove Embedding) => GAP1D => FC => RELU => DO => FC => RELU => DO => FC => SOFTMAX
+    </p>
     
 Model 2.2 (uses GlobalAveragePool1D) is performing better than Model 2.1 (uses GlobalMaxPool1D) in less epochs and in less wall time.
 
 3.   <a href="5_lstm.ipynb"><b>LSTM</b></a>
 
       * Model 3.1 (Vanilla LSTM):
-
+    <p align='center'>
       INPUT => EMBEDDING (int encoding) => LSTM => FC => RELU => DO => FC => SOFTMAX
+    </p>
+    
     
       * Model 3.2 (BidirectionalLSTM):
-
+    <p align='center'>
       INPUT => EMBEDDING (int encoding) => BiLSTM => FC => RELU => DO => FC => SOFTMAX
+    </p>
 
+   
       * Model 3.3 (Stacked LSTM):
-
+<p align='center'>
       INPUT => EMBEDDING (int encoding) => LSTM => LSTM => FC => RELU => DO => FC => SOFTMAX
+</p>
 
 Model 3.3 (stacked LSTM) <b>with fewer parameters</b> can achieve approximately similar or even better performance compared to Model 3.1 (vanilla LSTM), but requires more training epochs to achieve the same. Model 3.2 (BidirectionalLSTM) achieved better performance compared to other two models.
 
