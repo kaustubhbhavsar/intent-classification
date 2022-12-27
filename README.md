@@ -148,14 +148,16 @@ Overall, model 4, or the BERT model, provides the best performance. However, it 
 ```
 ├── Data Files                            # Data files              
     └── ...         
+├── Models                                # Saved models              
+    └── ...         
 ├── Other Files                           # Miscellaneous files
     └── ...
-├── 1_data_analysis                       # Data Analysis
-├── 2_topic_modelling                     # Topic Modelling
-├── 3_mlp_intEncoding                     # MLP Classifier (with int encoding)
-├── 4_mlp_gloveEmbedding                  # MLP Classifier (with glove embedding)
-├── 5_lstm                                # LSTM Classifier (vanilla, stacked, bidirectional)
-├── 6_smallBert                           # smallBert Classifier
+├── 1_data_analysis                       # Data Analysis file
+├── 2_topic_modelling                     # Topic Modelling file
+├── 3_mlp_intEncoding                     # MLP Classifier (with int encoding) file
+├── 4_mlp_gloveEmbedding                  # MLP Classifier (with glove embedding) file
+├── 5_lstm                                # LSTM Classifier (vanilla, stacked, bidirectional) file
+├── 6_smallBert                           # smallBert Classifier file
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
