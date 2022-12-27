@@ -37,51 +37,83 @@ Utilizing MLP, LSTM, and BERT (along with various embedding algorithms), intent 
 
 1.  <a href="3_mlp_intEncoding.ipynb"><b>MLP with Integer Encoding</b></a>
 
-    * Model 1.1:
+    * Model 1.1 :
 
-    <p align='center'>
+    <div align='center'>
+    
+    ```
     INPUT => EMBEDDING (int encoding) => FLATTEN => FC => RELU => DO => FC => SOFTMAX
-    </p>
+    ```
+    
+    </div>
 
-     * Model 1.2:
-    <p align='center'>
+     * Model 1.2 :
+    <div align='center'>
+    
+    ```
       INPUT => EMBEDDING (int encoding) => GAP1D => FC => RELU => DO => FC => SOFTMAX
-    </p>
+    ```
+    
+    </div>
 
 Model 1.1's flatten layer leads to more trainable parameters compared to model 1.2 that uses GlobalAveragePooling1D. Better performance is achieved by model 1.2.
 
 2.   <a href="4_mlp_gloveEmbedding.ipynb"><b>MLP with Glove Embedding</b></a>
     
-      * Model 2.1:
-    <p align='center'>
+      * Model 2.1 :
+      <div align='center'>
+      
+      ```
       INPUT => EMBEDDING (Glove Embedding) => GMP1D => FC => RELU => DO => FC => RELU => DO => FC => SOFTMAX
-    </p>
+      ```
+      
+      </div>
     
-      * Model 2.2:
-    <p align='center'>
+    
+      * Model 2.2 :
+      <div align='center'>
+    
+      ```
       INPUT => EMBEDDING (Glove Embedding) => GAP1D => FC => RELU => DO => FC => RELU => DO => FC => SOFTMAX
-    </p>
+      ```
+      
+      </div>
     
 Model 2.2 (uses GlobalAveragePool1D) is performing better than model 2.1 (uses GlobalMaxPool1D) in fewer epochs and in less wall time.
 
 3.   <a href="5_lstm.ipynb"><b>LSTM</b></a>
 
-      * Model 3.1 (Vanilla LSTM):
-    <p align='center'>
+      * Model 3.1 (Vanilla LSTM) :
+      <div align='center'>
+      
+      ```
       INPUT => EMBEDDING (int encoding) => LSTM => FC => RELU => DO => FC => SOFTMAX
-    </p>
+      ```
+      
+      </div>
     
     
-      * Model 3.2 (BidirectionalLSTM):
-    <p align='center'>
+      * Model 3.2 (BidirectionalLSTM) :
+      
+      <div align='center'>
+    
+      ```
       INPUT => EMBEDDING (int encoding) => BiLSTM => FC => RELU => DO => FC => SOFTMAX
-    </p>
+      ```
+    
+      </div>
 
    
-      * Model 3.3 (Stacked LSTM):
-<p align='center'>
+      * Model 3.3 (Stacked LSTM) :
+      
+      <div align='center'>
+
+      
+      ```
       INPUT => EMBEDDING (int encoding) => LSTM => LSTM => FC => RELU => DO => FC => SOFTMAX
-</p>
+      ```
+      
+      </div>
 
 Model 3.3 (stacked LSTM) <b>with fewer parameters</b> can achieve approximately similar or even better performance compared to model 3.1 (vanilla LSTM), but requires more training epochs to achieve the same. Model 3.2 (BidirectionalLSTM) achieved better performance compared to other two models.
 
