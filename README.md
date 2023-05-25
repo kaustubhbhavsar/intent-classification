@@ -166,8 +166,8 @@ Overall, model 4, or the BERT model, provides the best performance. However, it 
 <!-- Tools and Libraries used -->
 ## Languge and Libraries
 
-*   Language: Python
-*   Libraries: Tensorflow, Keras, Tensorflow-Hub, Scikit-Learn, Gensim, NLTK, Spacy, PyLDAviz, Re, WordCloud, Matplotlib, Seaborn, Numpy, Pandas, String, OS.
+*   Language: <b>Python</b>
+*   Libraries: <b>Tensorflow</b>, <b>Keras</b>, <b>Tensorflow-Hub</b>, <b>Scikit-Learn</b>, <b>Gensim</b>, <b>NLTK</b>, <b>Spacy</b>, <b>PyLDAviz</b>, <b>Re</b>, <b>WordCloud</b>, <b>Matplotlib</b>, <b>Seaborn</b>, <b>Numpy</b>, <b>Pandas</b>.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -175,5 +175,7 @@ Overall, model 4, or the BERT model, provides the best performance. However, it 
 ## Final Notes
 
 Notebooks can be run directly on google colab (make sure to upload required .py files in working directory if required).
+
+The codebase has been meticulously documented, incorporating comprehensive docstrings and comments. Please review these annotations, as they provide valuable insights into the functionality and operation of the code. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
